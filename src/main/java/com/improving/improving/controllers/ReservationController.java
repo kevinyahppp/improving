@@ -34,7 +34,7 @@ public class ReservationController {
 	 *
 	 * @return the list
 	 */
-	@GetMapping("/list")
+	@GetMapping("/reservations")
 	@ResponseStatus(HttpStatus.OK)
 	public List<Reservation> list() {
 
