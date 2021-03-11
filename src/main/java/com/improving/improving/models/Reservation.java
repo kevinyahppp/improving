@@ -60,6 +60,12 @@ public class Reservation implements Serializable {
 	/** The time. */
 	private LocalDateTime time;
 
+	/**
+	 * Instantiates a new reservation.
+	 *
+	 * @param name
+	 * @param time
+	 */
 	public Reservation(String name, LocalDateTime time) {
 		super();
 		this.name = name;
