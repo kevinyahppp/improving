@@ -59,5 +59,10 @@ public class Reservation implements Serializable {
 	
 	/** The time. */
 	private LocalDateTime time;
-	
+
+	public Reservation(String name, LocalDateTime time) {
+		super();
+		this.name = name;
+		this.time = time;
+	}
 }

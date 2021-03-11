@@ -14,6 +14,7 @@ import com.improving.improving.models.Reservation;
 // TODO: Auto-generated Javadoc
 /**
  * The Class RunnerComponent.
+ * 
  * @author Kevin Garcia.
  */
 @Component
@@ -37,12 +38,9 @@ public class RunnerComponent implements CommandLineRunner {
 		reservationDao.deleteAll();
 
 		for (int i = 1; i <= 10; i++) {
-			Reservation reservation = new Reservation();
-			reservation.setName("Reservation No. " + i);
-			reservation.setTime(LocalDateTime.now());
-			reservationDao.save(reservation);
+			reservationDao.save(new Reservation("Reservation No. " + i, LocalDateTime.now()));
 		}
-		
+
 		reservationDao.findAll().forEach(reservation -> {
 			logger.info("{}", reservation);
 		});
